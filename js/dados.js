@@ -1,13 +1,4 @@
-/*
-===============================================================================
-ARQUIVO: js/dados.js
-AUTOR: Matheus Henrique Santos Villar
-DESCRIÇÃO: Estrutura de DADOS (Array de Objetos) com as revistas digitalizadas
-           disponíveis no acervo local (img/revistas/<id>/p-001.webp...).
-PISTA PARA DEFESA: Cumpre o requisito de estrutura de dados no JavaScript e
-alimenta dinamicamente as páginas index, acervo, colecao e leitor.
-===============================================================================
-*/
+
 
 const listaDePublicacoesDoAcervo = [
   {
