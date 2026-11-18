@@ -1,17 +1,3 @@
-/*
-===============================================================================
-ARQUIVO: js/app.js
-AUTOR: Matheus Henrique Santos Villar
-DESCRIÇÃO: Lógica única em JavaScript puro para todas as páginas do site.
-PISTAS PARA DEFESA:
-- Estrutura Sequencial: Execução linear ao carregar o DOM (DOMContentLoaded).
-- Estrutura de Repetição: Laço "for" em renderizarCartoesDePublicacoes().
-- Estrutura Condicional: Blocos "if / else" nos filtros, leitor e validações.
-- Estrutura de Dados: Uso do array "listaDePublicacoesDoAcervo" e JSON.
-- Eventos DOM: Uso de addEventListener("click", "change", "submit").
-- Persistência: Uso de "localStorage" na página newsletter.html.
-===============================================================================
-*/
 
 document.addEventListener("DOMContentLoaded", function () {
   inicializarPaginaInicial();
