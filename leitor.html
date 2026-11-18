@@ -1,0 +1,100 @@
+<!--
+===============================================================================
+ARQUIVO: leitor.html
+AUTOR: Matheus Henrique Santos Villar
+DESCRIÇÃO: Página de leitura detalhada carregada via parâmetro URL (?id=).
+PISTAS PARA DEFESA:
+- Lê URLSearchParams no app.js para buscar o objeto correspondente em dados.js.
+- Botão #botao-aumentar-fonte altera dinamicamente o estilo DOM do texto.
+===============================================================================
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leitor de Edição | Banca Atemporal</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="img/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header id="cabecalho-principal">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand text-warning" href="index.html">BANCA ATEMPORAL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipalBanca" aria-controls="menuPrincipalBanca" aria-expanded="false" aria-label="Alternar menu">
+          ☰
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipalBanca">
+          <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link link-menu-banca" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link link-menu-banca" href="acervo.html">Acervo</a></li>
+          <li class="nav-item"><a class="nav-link link-menu-banca" href="colecao.html">Coleção</a></li>
+          <li class="nav-item"><a class="nav-link link-menu-banca fw-bold text-warning" href="leitor.html">Leitor</a></li>
+          <li class="nav-item"><a class="nav-link link-menu-banca" href="linha-do-tempo.html">Linha do Tempo</a></li>
+          <li class="nav-item"><a class="nav-link link-menu-banca" href="multimidia.html">Multimídia</a></li>
+          <li class="nav-item"><a class="nav-link link-menu-banca" href="newsletter.html">Newsletter</a></li>
+          <li class="nav-item"><a class="nav-link link-menu-banca" href="contato.html">Contato</a></li>
+          <li class="nav-item"><a class="nav-link link-menu-banca" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link link-menu-banca" href="referencias.html">Referências</a></li>
+          <li class="nav-item"><a class="nav-link link-menu-banca" href="https://archive.org/" target="_blank" rel="noopener">Archive.org ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-4">
+    <section id="area-leitura-edicao" class="bg-white p-4 border rounded shadow-sm">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <a href="acervo.html" class="btn btn-outline-dark btn-sm">← Voltar ao Acervo</a>
+        <button type="button" id="botao-aumentar-fonte" class="btn btn-dark btn-sm">Alternar Tamanho da Fonte (A+)</button>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-4 mb-3">
+          <img id="imagem-edicao-leitor" src="img/revistas/mad-1963-01/p-001.webp" onerror="this.src='img/capa-padrao.png'" alt="Página da revista selecionada" class="w-100 rounded border">
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <button type="button" id="botao-pagina-anterior" class="btn btn-outline-dark btn-sm">← Anterior</button>
+            <span id="indicador-pagina-leitor" class="small fw-bold">Página 1</span>
+            <button type="button" id="botao-pagina-proxima" class="btn btn-outline-dark btn-sm">Próxima →</button>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h1 id="titulo-edicao-leitor">Carregando edição...</h1>
+          <p id="meta-edicao-leitor" class="text-muted fw-bold"></p>
+          <hr>
+          <p id="texto-edicao-leitor" style="font-size: 18px;"></p>
+          <div class="mt-3">
+            <label for="player-audio-leitor" class="form-label small fw-bold">Som ambiente de leitura:</label>
+            <audio id="player-audio-leitor" controls preload="metadata" class="w-100">
+              <source src="audio/folheando-revista.mp3" type="audio/mpeg">
+              Seu navegador não reproduz áudios.
+            </audio>
+          </div>
+          <div class="alert alert-info mt-3">
+            Dica: Clique em "Ler Edição" em qualquer revista do Acervo para abrir a ficha correspondente aqui.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="rodape-principal" class="py-4">
+    <div class="container rodape-flex">
+      <div>
+        <strong>BANCA ATEMPORAL</strong> — Acervo Digital de Revistas Históricas (1963–2020)
+      </div>
+      <div class="small">
+        Desenvolvido por Matheus Henrique Santos Villar · Universidade Positivo
+      </div>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
