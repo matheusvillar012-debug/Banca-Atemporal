@@ -1,0 +1,88 @@
+<!--
+===============================================================================
+ARQUIVO: sobre.html
+AUTOR: Matheus Henrique Santos Villar
+DESCRIÇÃO: Página institucional desenvolvida com HTML, CSS e JS 100% PUROS.
+PISTAS PARA DEFESA:
+- Cumpre o requisito 4 do PDF: Página sem nenhum framework ou biblioteca externa,
+  utilizando apenas css/puro.css (Grid + Flexbox) e JavaScript nativo (app.js).
+===============================================================================
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre o Projeto | Banca Atemporal</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="img/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/puro.css">
+</head>
+<body>
+  <header id="cabecalho-puro">
+    <a href="index.html" class="marca-puro">BANCA ATEMPORAL</a>
+    <nav aria-label="Menu principal">
+      <ul class="menu-puro">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="acervo.html">Acervo</a></li>
+        <li><a href="colecao.html">Coleção</a></li>
+        <li><a href="leitor.html">Leitor</a></li>
+        <li><a href="linha-do-tempo.html">Linha do Tempo</a></li>
+        <li><a href="multimidia.html">Multimídia</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="sobre.html" style="background-color:#b8860b;color:#1f1d1a;font-weight:bold;">Sobre</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="https://archive.org/" target="_blank" rel="noopener">Archive.org ↗</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container-puro">
+    <section>
+      <h1 class="titulo-secao-puro">Sobre a Banca Atemporal</h1>
+      <p>A Banca Atemporal é um acervo digital dedicado à preservação de revistas impressas históricas publicadas entre 1963 e 2020. O projeto organiza edições marcantes de humor, música, cultura pop e videogames em uma interface acessível.</p>
+    </section>
+
+    <section class="grade-cartoes-puro">
+      <article class="cartao-puro">
+        <div>
+          <h2>Objetivo do Projeto</h2>
+          <p>Demonstrar o domínio de HTML5 semântico, CSS3 responsivo (Grid e Flexbox) e JavaScript puro para manipulação dinâmica de dados.</p>
+        </div>
+        <a href="acervo.html" class="botao-puro">Conhecer Acervo</a>
+      </article>
+
+      <article class="cartao-puro">
+        <div>
+          <h2>Identidade Visual</h2>
+          <p>Paleta inspirada em papel jornal envelhecido (#f6f3ec), tinta tipográfica (#1f1d1a) e detalhes em dourado editorial (#b8860b).</p>
+        </div>
+        <a href="linha-do-tempo.html" class="botao-puro">Ver Cronologia</a>
+      </article>
+
+      <article class="cartao-puro">
+        <div>
+          <h2>Código Puro</h2>
+          <p>Esta página e a página de Referências foram construídas sem Bootstrap, aplicando CSS Grid e Flexbox diretamente em css/puro.css.</p>
+        </div>
+        <a href="referencias.html" class="botao-puro">Ver Referências</a>
+      </article>
+    </section>
+
+    <section class="caixa-destaque-puro">
+      <h2>Curiosidade Editorial (Interação JS Puro)</h2>
+      <p id="texto-curiosidade-pura">Clique no botão abaixo para alternar curiosidades sobre o acervo usando JavaScript puro.</p>
+      <button type="button" id="botao-curiosidade-pura" class="botao-puro">Próxima Curiosidade</button>
+    </section>
+  </main>
+
+  <footer id="rodape-puro">
+    <div><strong>BANCA ATEMPORAL</strong> — Acervo Digital de Revistas Históricas</div>
+    <div>Desenvolvido por Matheus Henrique Santos Villar · Universidade Positivo</div>
+  </footer>
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

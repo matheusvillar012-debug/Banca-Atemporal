@@ -1,0 +1,112 @@
+/*
+===============================================================================
+ARQUIVO: css/estilo.css
+AUTOR: Matheus Henrique Santos Villar
+DESCRIÇÃO: Folha de estilos externa principal para as páginas com Bootstrap.
+PISTAS PARA DEFESA:
+- Seletores de TAG (body, main), CLASSE (.cartao-edicao) e ID (#cabecalho-principal).
+- CSS Grid Layout (.grade-publicacoes-grid).
+- CSS Flexbox (.rodape-flex).
+- Estados de formulário (:focus, :hover, :invalid).
+- Media Query para responsividade (@media max-width: 768px).
+===============================================================================
+*/
+
+body {
+  background-color: #f6f3ec;
+  color: #1f1d1a;
+  font-family: Georgia, "Times New Roman", serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+#cabecalho-principal {
+  background-color: #1f1d1a;
+  border-bottom: 3px solid #b8860b;
+}
+
+.link-menu-banca {
+  color: #f6f3ec !important;
+  transition: color 0.25s ease, background-color 0.25s ease;
+  border-radius: 4px;
+  padding: 6px 10px;
+}
+
+.link-menu-banca:hover {
+  color: #1f1d1a !important;
+  background-color: #e5b84b;
+}
+
+.grade-publicacoes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.cartao-edicao {
+  background-color: #ffffff;
+  border: 1px solid #dcd5c7;
+  transition: transform 0.2s ease;
+}
+
+.cartao-edicao:hover {
+  transform: translateY(-4px);
+}
+
+.imagem-capa-cartao {
+  height: 240px;
+  object-fit: cover;
+  background-color: #e2dcd0;
+}
+
+.campo-formulario-banca {
+  border: 2px solid #cfc7b8;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo-formulario-banca:hover {
+  border-color: #8c6d1f;
+}
+
+.campo-formulario-banca:focus {
+  border-color: #1f1d1a;
+  box-shadow: 0 0 0 0.2rem rgba(184, 134, 11, 0.25);
+  outline: none;
+}
+
+.campo-formulario-banca:invalid:not(:placeholder-shown) {
+  border-color: #dc3545;
+  background-color: #fff8f8;
+}
+
+#rodape-principal {
+  background-color: #1f1d1a;
+  color: #f6f3ec;
+  border-top: 3px solid #b8860b;
+  margin-top: 48px;
+}
+
+.rodape-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .grade-publicacoes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rodape-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
