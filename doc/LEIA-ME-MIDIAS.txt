@@ -1,6 +1,6 @@
 ESTRUTURA DE MÍDIAS DO PROJETO BANCA ATEMPORAL
-==============================================
-As 3 edições do acervo já estão integradas e prontas para leitura offline em:
+
+As 3 edições para leitura offline em:
 1. img/revistas/mad-1963-01/ (52 páginas: p-001.webp a p-052.webp — MAD Nº 76, Jan. 1963)
 2. img/revistas/popeye-2020-11/ (p-001.webp — POPEYE Nº 883, Nov. 2020)
 3. img/revistas/editorial-moda-2020/ (4 páginas: p-001.webp a p-004.webp — Lookbook & Editorial)
